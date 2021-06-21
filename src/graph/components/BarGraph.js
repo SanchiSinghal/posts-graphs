@@ -26,6 +26,7 @@ const BarGraph = () => {
 
       return (
         <div className="barGraph">
+        <title> Graphical Representation of no. of posts created by user per 10000 post entries.</title>
         <BarChart
           width={500}
           height={300}

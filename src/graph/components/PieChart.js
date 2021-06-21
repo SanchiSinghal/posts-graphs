@@ -22,6 +22,7 @@ const PieCharts = () => {
     })
     return (
       <div className="pieChart" width="100%" height="100%">
+        <title> Graphical Representation of complete vs incomplete task per 10000 task.</title>
         <PieChart width={400} height={400}>
           <Pie
             dataKey="value"

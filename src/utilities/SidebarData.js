@@ -16,12 +16,6 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Line Chart',
-    path: '/lineChart',
-    icon: <FaIcons.FaChartLine />,
-    cName: 'nav-text'
-  },
-  {
     title: 'Bar Graph',
     path: '/barGraph',
     icon: <FaIcons.FaChartBar />,

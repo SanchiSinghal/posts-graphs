@@ -44,28 +44,29 @@ const LinePostChart = () => {
 
       return (
         <div className="home">
+          <title> Graphical Representation of posts created per 10000 entries month wise with day count.</title>
           <LineChart
-          width={1000}
-          height={500}
-          data={postData}
-          margin={{
-            top: 50,
-            right: 100,
-            left: 200,
-            bottom: 50
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="key" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line
-            type="monotone"
-            dataKey="count"
-            stroke="#8884d8"
-            activeDot={{ r: 8 }}
-          />
+            width={1000}
+            height={500}
+            data={postData}
+            margin={{
+              top: 50,
+              right: 100,
+              left: 200,
+              bottom: 50
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="key" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="count"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
         </LineChart>
         <div>
           <Dropdown
