@@ -35,7 +35,7 @@ const LinePostChart = () => {
       if (monthState) {
         postData = [];
         monthState && days.map((key) => {
-          postData.push({
+          return postData.push({
             key,
             'count': daysResult[key] ? daysResult[key].length : 0
           })
@@ -43,7 +43,7 @@ const LinePostChart = () => {
       }
 
       return (
-        <div style={{ display: 'flex', flexDirection: 'column'}}>
+        <div className="home">
           <LineChart
           width={1000}
           height={500}
@@ -74,6 +74,7 @@ const LinePostChart = () => {
             selection
             onChange={(e, data) => setMonthState(data.value)}
             options={monthsDropdown}
+            className='ui dropdown search'
           />
         </div>
         </div>

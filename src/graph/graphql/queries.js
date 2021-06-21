@@ -47,7 +47,7 @@ query Post {
 
 export const GET_ALL_POSTS = gql`
 query allPosts {
-  allPosts (count: 1) {
+  allPosts (count: 100000) {
     id
     title
     body
@@ -66,5 +66,15 @@ query allPosts {
     }
   }
 }`;
+
+export const GET_ALL_TODOS = gql`
+query allTodos {
+  allTodos (count: 10) {
+    id
+    title
+    completed
+  }
+}
+`;
 
 
