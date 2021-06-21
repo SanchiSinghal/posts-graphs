@@ -6,8 +6,8 @@ import { COLORS } from '../../utilities/constant';
 
 const PieCharts = () => {
   const { loading, data, error } = useQuery(GET_ALL_TODOS);
-  if (loading) return <p> Loading...</p>;
-  if (error) return <p> Error ${error.message} </p>
+  if (loading) return <p className="default-text"> Loading...</p>;
+  if (error) return <p className="default-text"> Error {error.message} </p>
   if (data) {
     var data01 = [
       {name: 'Completed', value: 7},
@@ -22,7 +22,7 @@ const PieCharts = () => {
     })
     return (
       <div className="pieChart" width="100%" height="100%">
-        <title> Graphical Representation of complete vs incomplete task per 10000 task.</title>
+        <p className="default-text"> Graphical Representation of complete vs incomplete task per 10000 task.</p>
         <PieChart width={400} height={400}>
           <Pie
             dataKey="value"

@@ -6,8 +6,8 @@ import { groupBy } from 'lodash';
 const BarGraph = () => {
     const {loading, data, error} = useQuery(GET_ALL_POSTS);
 
-    if (loading) return <p> Loading...</p>;
-    if (error) return <p> Error ${error.message} </p>
+    if (loading) return <p className="default-text"> Loading...</p>;
+    if (error) return <p className="default-text"> Error {error.message} </p>
     if (data) {
       const getUserCount = item => {
         const id = item && item.author && item.author.id;
@@ -26,7 +26,7 @@ const BarGraph = () => {
 
       return (
         <div className="barGraph">
-        <title> Graphical Representation of no. of posts created by user per 10000 post entries.</title>
+        <p className="default-text"> Graphical Representation of no. of posts created by user per 10000 post entries.</p>
         <BarChart
           width={500}
           height={300}

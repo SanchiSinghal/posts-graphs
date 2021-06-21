@@ -12,8 +12,8 @@ const LinePostChart = () => {
     const {loading, data, error} = useQuery(GET_ALL_POSTS);
     const [monthState, setMonthState] = useState("");
 
-    if (loading) return <p> Loading...</p>;
-    if (error) return <p> Error ${error.message} </p>
+    if (loading) return <p className="default-text"> Loading...</p>;
+    if (error) return <p className="default-text"> Error {error.message} </p>
     if (data) {
       const getMonthCount = item => {
         const month = item && item.createdAt && moment(parseInt(item.createdAt)).format('MMM');
@@ -44,7 +44,7 @@ const LinePostChart = () => {
 
       return (
         <div className="home">
-          <title> Graphical Representation of posts created per 10000 entries month wise with day count.</title>
+          <p className="default-text"> Graphical Representation of posts created per 10000 entries month wise with day count.</p>
           <LineChart
             width={1000}
             height={500}
